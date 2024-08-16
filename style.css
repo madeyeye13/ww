@@ -303,6 +303,8 @@ header {
     color: var(--dark-main-color);
     font-weight: 500;
     font-size: 1em;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 .dte hr {
@@ -321,3 +323,125 @@ header {
 .dte button:hover {
     background-color: var(--gold-color);
 }
+
+
+
+/*-----------------------------MARRID------------------*/
+
+
+#marid {
+    margin-top: 70px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+}
+
+
+.marid-text h4 {
+    margin-bottom: 20px;
+    font-family: custom3, cursive;
+    color: var(--gold-color);
+}
+
+.marid-text p {
+    line-height: 30px;
+    font-weight: 500;
+    color: var(--dark-main-color);
+    font-size: 1.2em;
+}
+
+
+/*-----------------------------DIMAGE------------------*/
+
+#dimage {
+
+    overflow: hidden;
+}
+
+.dimg img {
+    width: 100%;
+}
+
+
+/*-----------------------------QUICKLINKS------------------*/
+
+#quick {
+    margin-bottom: 30px;
+    margin-top: 50px;
+
+}
+
+.quick1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    
+    
+}
+
+
+.quick1 ul {
+    list-style-type: none;
+    
+    
+}
+
+
+
+
+.quick1 ul li {
+    margin: 20px 0;
+    position: relative;
+    transition: 0.3 ease-in-out;
+}
+
+.quick1 li {
+    transition: 0.3 ease-in-out;
+}
+
+
+
+/*----------------------FOOTER----------------------*/
+
+
+
+#fut {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+    margin-top: 70px;
+    align-items: center;
+    text-align: center;
+}
+
+.fut1 h4 {
+    font-size: 2em;
+    font-weight: 400;
+    margin-bottom: 20px;
+    color: var(--dark-main-color);
+}
+
+.ln {
+    width: 130px;
+    height: 2px;
+    background-color: var(--fade-out);
+    margin-bottom: 5px;
+}
+
+.fut1 p {
+    font-size: 1.2em;
+    color: var(--dark-main-color);
+}
+
+#fut h6 {
+    margin-top: 40px;
+}
+
+#fut a {
+    color: var(--gold-color);
+    text-decoration: underline;
+}
+
+

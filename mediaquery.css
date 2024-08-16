@@ -1,0 +1,226 @@
+@media (min-width: 728px) {
+
+
+    @font-face {
+        font-family: 'custom';
+        src: url(fonts/Royal\ Ambition\ Script.otf) format('opentype');
+    }
+    
+    @font-face {
+        font-family: 'custom2';
+        src: url(fonts/Ballenthing.otf) format('opentype');
+    }
+    
+    @font-face {
+        font-family: 'custom3';
+        src: url(fonts/Thesignature.otf) format('opentype');
+    }
+
+    :root {
+        --gold-color:#b5822c;
+        --lightgold-color:#fff7eb;
+        --white-color: white;
+        --fade-out:rgb(85, 85, 85);
+        --dark-main-color:rgb(20, 18, 8);
+        --font-1:"Playfair Display", serif;
+        --font-2: "Poppins", sans-serif;
+        --font-3: "Sacramento", cursive;
+    }
+
+
+
+
+    header {
+        height: 100px;
+        
+    }
+
+
+
+    .nav-icon {
+        display: none;
+    }
+
+    .logo {
+        position: relative;
+        top: -20px;
+    }
+
+    .navigation {
+        position: fixed;
+        top: 40px;
+        left: auto;
+        width: 100%;
+        height: auto;
+        background-color: transparent;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column; 
+        transition: none;
+        padding: 10px 0; /* Add some spacing between logo and nav */
+    }
+
+    .navigation ul li a {
+        font-weight: 400;
+        font-size: 15px;
+        margin-right: 20px;
+    }
+
+    .navigation ul {
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    .navigation ul li {
+        margin: 0 15px;
+    }
+
+    .close-icon {
+        display: none;
+    }
+
+
+    /*-------------------HEROIMAGE-----------------*/
+
+
+    #hero {
+        position: relative;
+        top: 100px;
+        height: 50vh;
+    }
+
+
+    /*-----------------------INTRO SECTION-----------------*/
+
+
+
+    #intro {
+        margin-top: 25%;
+    }
+
+    .intro-text {
+        display: none;
+    }
+
+    .intro-text2 {
+        display: flex;
+        justify-content: center;
+        
+        text-align: center;
+
+    }
+
+
+    .intro-text2 span {
+        font-family: custom3, cursive;
+        /* font-style: italic; */
+        font-size: 3em;
+        color: var(--gold-color);
+        font-weight: 500;
+    }
+    
+    .intro-text2 h2 {
+        
+        font-size: 2.7em;
+        font-weight: 600;
+        color: var(--dark-main-color);
+        
+        
+    
+    }
+    
+    .intro-text2 span2 {
+        position: relative;
+        bottom: 20px;
+        
+    }
+
+
+    .name h2 {
+        font-size: 4rem;
+        font-weight: 400;
+        color: var(--dark-main-color);
+    }
+
+
+    /*--------------------------------DATE----------------------------*/
+
+
+    .dte p {
+        font-family: custom3, cursive;
+        color: var(--gold-color);
+        font-size: 1.7em;
+        margin-bottom: 15px;
+    }
+    
+    .dte1 {
+        margin-bottom: 10px;
+    }
+    
+    .dte h5 {
+        color: var(--dark-main-color);
+        font-weight: 400;
+        font-size: 1.2em;
+    }
+    
+    .dte hr {
+        display: none;
+    }
+
+
+}
+
+
+/*---------------------------MEDIA QUERY 1024PX-------------------*/
+@media (min-width: 1024px) {
+    #hero {
+        position: relative;
+        top: 100px;
+        height: 150vh;
+    }
+
+    .hero-img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+
+    }
+
+
+    .hero-img img {
+        object-fit: cover;
+        object-position: center; /* Ensure image is centered */
+    }
+
+
+    /*-----------------------------INTRO SECTION---------------*/
+
+    #intro {
+        margin-top: 15%;
+    }
+
+
+
+
+    /*---------------------DATE-----------------*/
+
+
+
+    .dte2 {
+        display: flex;
+        flex-direction: row;
+        text-align: center;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .hr {
+        background: var(--dark-main-color);
+        width: 2px;
+    }
+
+}
