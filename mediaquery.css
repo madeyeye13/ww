@@ -170,6 +170,93 @@
     }
 
 
+    .marid-text p {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
+
+    
+    
+    
+    /*------------------------------------WEDDDING DETAILS-------------------------*/
+
+    #intro1 {
+        margin-top: 24%;
+    }
+
+    .intro-text1 {
+        display: none;
+    }
+
+    .intro-text3 {
+        display: flex;
+        justify-content: center;
+        
+        text-align: center;
+
+    }
+
+
+    .intro-text3 span {
+        font-family: custom3, cursive;
+        /* font-style: italic; */
+        font-size: 3em;
+        color: var(--gold-color);
+        font-weight: 500;
+    }
+    
+    .intro-text3 h2 {
+        
+        font-size: 2.7em;
+        font-weight: 600;
+        color: var(--dark-main-color);
+        
+        
+    
+    }
+    
+    .intro-text3 span2 {
+        position: relative;
+        bottom: 20px;
+        
+    }
+
+
+    .name1 h2 {
+        font-size: 4rem;
+        font-weight: 400;
+        color: var(--dark-main-color);
+    }
+
+
+    /*------------------------ WEDDING DETAILS -----------------*/
+
+
+    .dte2a h5 {
+        font-size: 1.2em;
+        line-height: 30px;
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
+    .datee2 {
+        margin-top: 100px;
+    }
+
+    .datee2 p {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+
+    .datee2 h5 {
+        margin-top: 30px;
+    }
+
+
+
+
 }
 
 
@@ -221,6 +308,12 @@
     .hr {
         background: var(--dark-main-color);
         width: 2px;
+    }
+
+
+    .marid-text p {
+        padding-left: 70px;
+        padding-right: 70px;
     }
 
 }
