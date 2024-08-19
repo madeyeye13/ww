@@ -236,8 +236,8 @@
     .dte2a h5 {
         font-size: 1.2em;
         line-height: 30px;
-        padding-left: 50px;
-        padding-right: 50px;
+        padding-left: 100px;
+        padding-right: 100px;
     }
 
     .datee2 {
@@ -253,6 +253,20 @@
     .datee2 h5 {
         margin-top: 30px;
     }
+
+
+
+    .wrv1 h3 {
+        padding-left: 100px;
+        padding-right: 100px;
+    }
+
+
+
+    
+    
+
+    
 
 
 
@@ -315,5 +329,36 @@
         padding-left: 70px;
         padding-right: 70px;
     }
+
+
+
+
+
+
+
+
+
+
+
+    /*-----------------------WEDDING DETAILS------------------------*/
+
+
+    .datee2 p {
+        padding-left: 70px;
+        padding-right: 70px;
+    }
+
+    .dte2a h5 {
+        padding-left: 100px;
+        padding-right: 100px;
+    }
+
+    .wrv1 h3 {
+        padding-left: 100px;
+        padding-right: 100px;
+    }
+
+    
+   
 
 }

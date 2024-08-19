@@ -346,9 +346,9 @@ header {
 
 .marid-text p {
     line-height: 30px;
-    font-weight: 500;
+    font-weight: 400;
     color: var(--dark-main-color);
-    font-size: 1.2em;
+    font-size: 1em;
 }
 
 
