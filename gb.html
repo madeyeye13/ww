@@ -631,6 +631,62 @@
 
 
 
+////////////SQLDATABASE
+
+
+
+// const sqlite3 = require('sqlite3').verbose();
+
+// // Connect to a database (or create it if it doesn't exist)
+// const db = new sqlite3.Database('./database.db', (err) => {
+//   if (err) {
+//     console.error('Error connecting to the database:', err.message);
+//   } else {
+//     console.log('Connected to the SQLite database.');
+//   }
+// });
+
+// // Create a table
+// db.run(`CREATE TABLE IF NOT EXISTS comments(
+//     id INTEGER PRIMARY KEY AUTOINCREMENT,
+//     name TEXT,
+//     email TEXT,
+//     comment TEXT
+// )`);
+
+// // Insert data into the table
+// db.run(`INSERT INTO users(name, email, comment) VALUES(?, ?)`, ['John Doe', 'john@example.com', 'testing'], function(err) {
+//     if (err) {
+//         return console.log(err.message);
+//     }
+//     console.log(`A row has been inserted with rowid ${this.lastID}`);
+// });
+
+// // Query data from the table
+// db.all(`SELECT * FROM users`, [], (err, rows) => {
+//     if (err) {
+//         throw err;
+//     }
+//     rows.forEach((row) => {
+//         console.log(row);
+//     });
+// });
+
+// // Close the database connection
+// db.close((err) => {
+//     if (err) {
+//         console.error(err.message);
+//     }
+//     console.log('Closed the database connection.');
+// });
+
+
+
+
+
+
+
+
 
 
 
@@ -645,6 +701,9 @@
 
 
     <script src="script.js"></script>
+
+    
+    <script src="app.js"></script>
     
 </body>
 </html>

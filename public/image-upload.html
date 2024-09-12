@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M & O | Keep Memories</title>
+
+    <meta name="description" content="Check Our Wedding Page">
+    <!--==========FavIcon========-->
+    <link rel="icon" type="image/x-icon" href="image/logo.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!--============Google Fonts================-->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap" rel="stylesheet">
+    <!--====================Font Awesome======================-->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" 
+     integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+      crossorigin="anonymous" 
+     referrerpolicy="no-referrer" />
+
+     <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+
+    <!--=====Cascading Style Sheet====-->
+
+     <link rel="stylesheet" href="style.css">
+
+
+     <!--=====Media Query====-->
+
+     <link rel="stylesheet" href="mediaquery.css">
+
+    <!--============ Boxicons ===============-->
+
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  
+    <!------------AOS--------------->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+
+
+</head>
+
+
+
+<body>
+
+    <header>
+        <div class="nav-icon">
+            <i class="fas fa-bars"></i>
+        </div>
+        <div class="logo">
+            M & O
+        </div>
+    </header>
+    
+    <nav class="navigation">
+        <div class="close-icon">
+            <i class="fas fa-times"></i>
+        </div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="wd.html">Wedding Details</a></li>
+            <li><a href="gr.html">Gift Registry</a></li>
+            <li><a href="gb.html">Guestbook</a></li>
+            <li><a href="pa.html">Photo Album</a></li>
+        </ul>
+    </nav>
+
+
+
+    <!----------------UPLOAD IMAGE/VIDEOS------------------->
+
+
+    <div class="upload-section">
+        <h2>Share Your Wedding Memories</h2>
+      
+        <!-- Preview container with close button -->
+        <div class="preview-container" id="previewTrigger">
+          <div class="preview" id="filePreview">
+            <span>No file selected yet...</span>
+          </div>
+          <button class="cancel-btn" id="cancelPreviewBtn" style="display: none;">&#10005;</button> <!-- Close button initially hidden -->
+        </div>
+      
+        <!-- Hidden input field for file selection -->
+        <input type="file" accept="image/*, video/*" id="fileInput" capture="environment, user" multiple style="display: none;" />
+      
+        <div class="upload-buttons">
+          <button class="upload-btn" id="uploadBtn">Upload</button>
+        </div>
+      
+        <!-- Upload progress bar -->
+        <div class="upload-progress" id="uploadProgressContainer" style="display: none;">
+          <div class="progress-bar" id="progressBar"></div>
+          <button class="cancel-btn" id="cancelUploadBtn">&#10005;</button>
+        </div>
+      </div>
+      
+      
+
+
+
+
+   
+
+
+    <style>
+
+        a{
+            color:inherit;
+            text-decoration: none;
+        }
+
+        @font-face {
+            font-family: 'custom';
+            src: url(fonts/Royal\ Ambition\ Script.otf) format('opentype');
+        }
+
+        @font-face {
+            font-family: 'custom2';
+            src: url(fonts/Ballenthing.otf) format('opentype');
+        }
+
+        @font-face {
+            font-family: 'custom3';
+            src: url(fonts/Thesignature.otf) format('opentype');
+        }
+
+
+        :root {
+            --gold-color:#b5822c;
+            --lightgold-color:#fff7eb;
+            --white-color: white;
+            --fade-out:rgb(85, 85, 85);
+            --dark-main-color:rgb(20, 18, 8);
+            --font-1:"Playfair Display", serif;
+            --font-2: "Poppins", sans-serif;
+            --font-3: "Sacramento", cursive;
+        }
+
+
+
+        /*-----------------UPLOAD STYLING----------*/
+
+
+                .upload-section {
+        width: 100%;
+        max-width: 350px;
+        margin: auto;
+        margin-top: 120px;
+        padding: 20px;
+        background-color: #f9f9f9;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        text-align: center;
+        }
+
+        h2 {
+        color: #333;
+        margin-bottom: 20px;
+        }
+
+        .upload-buttons {
+        margin-top: 15px;
+        }
+
+        #fileInput {
+        display: none;
+        }
+
+        .upload-btn {
+        padding: 10px 20px;
+        background-color: #8e44ad;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        }
+
+        .upload-btn:hover {
+        background-color: #732d91;
+        }
+
+        .preview-container {
+            margin-top: 15px;
+            cursor: pointer; /* Make the preview container clickable */
+            transition: background-color 0.3s ease;
+            position: relative; /* Position relative for absolute positioning of the close icon */
+            }
+
+            .preview-container:hover {
+            background-color: #e6e6e6; /* Slight hover effect to indicate it's clickable */
+            }
+
+            .preview {
+                min-height: 200px;
+                background-color: #f2f2f2;
+                border: 2px dashed #ccc;
+                padding: 15px;
+                border-radius: 8px;
+                display: flex;
+                flex-wrap: wrap; /* Allow wrapping of images/videos */
+                justify-content: center;
+                align-items: center;
+                overflow: hidden; /* Hide overflow content to fit inside the container */
+                }
+
+                .preview img, .preview video {
+                max-width: 100%;
+                max-height: 150px; /* Limit height to prevent overflow */
+                margin: 5px; /* Space between images/videos */
+                border-radius: 5px;
+                }
+
+            .cancel-btn {
+            position: absolute;
+            right: 10px; /* Adjust position for visibility */
+            top: 10px;
+            background: none;
+            border: none;
+            color: #d9534f;
+            font-size: 24px;
+            cursor: pointer;
+            transition: opacity 0.3s ease;
+            }
+
+            .cancel-btn:hover {
+            color: #c9302c;
+            }
+
+            /* Progress bar styling */
+            .upload-progress {
+            position: relative;
+            width: 100%;
+            height: 10px;
+            background-color: #ccc;
+            border-radius: 5px;
+            overflow: hidden;
+            margin-top: 20px;
+            }
+
+            .progress-bar {
+            height: 100%;
+            width: 0;
+            background-color: #8e44ad;
+            transition: width 0.3s ease;
+            }
+
+
+
+        /* Bounce animation for buttons */
+        .upload-btn, .cancel-btn {
+        animation: bounce 0.3s ease-in-out;
+        }
+
+        @keyframes bounce {
+        0%, 100% { transform: scale(1); }
+        50% { transform: scale(1.1); }
+        }
+
+
+        
+
+        /* ----------- MEDIA QUERY----------*/
+
+
+        @media (min-width: 728px) {
+
+            
+
+
+        }
+
+        /*------------------SMALL DESKTOP--------*/
+
+
+            @media (min-width: 1024px) {
+
+                .upload-section {
+        width: 100%;
+        max-width: 500px;
+        margin: auto;
+        margin-top: 120px;
+        padding: 20px;
+        background-color: #f9f9f9;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        text-align: center;
+        }
+
+           
+        }
+
+
+
+
+
+
+
+
+
+
+    </style>
+    
+    
+    
+
+
+    
+
+    <!---------------------------------footer-------------------------------->
+
+
+    <footer id="fut">
+        <div class="fut1">
+            <h4>M & O</h5>
+            <div class="ln"></div>
+            <p>21.12.2024</p>
+        </div>
+
+        <h6>Created By <a href="https://betzalelco.xyz">Betzalel Concept</a></h6>
+    </footer>
+
+
+
+    
+
+
+<script>
+
+
+    
+const fileInput = document.getElementById('fileInput');
+const filePreview = document.getElementById('filePreview');
+const previewTrigger = document.getElementById('previewTrigger');
+const cancelPreviewBtn = document.getElementById('cancelPreviewBtn');
+const uploadProgressContainer = document.getElementById('uploadProgressContainer');
+const progressBar = document.getElementById('progressBar');
+const uploadBtn = document.getElementById('uploadBtn');
+const cancelUploadBtn = document.getElementById('cancelUploadBtn');
+
+// Trigger file input when preview container is clicked
+previewTrigger.addEventListener('click', function () {
+  fileInput.click(); // Simulate a click on the hidden file input
+});
+
+// Handle file input change event
+fileInput.addEventListener('change', function () {
+  const files = fileInput.files;
+  filePreview.innerHTML = ''; // Clear previous preview
+  cancelPreviewBtn.style.display = 'block'; // Show close button
+
+  for (let file of files) {
+    const fileReader = new FileReader();
+
+    if (file.type.startsWith('image/')) {
+      fileReader.onload = function (e) {
+        const img = document.createElement('img');
+        img.src = e.target.result;
+        img.style.margin = '5px'; // Add spacing between images
+        filePreview.appendChild(img);
+      };
+    } else if (file.type.startsWith('video/')) {
+      fileReader.onload = function (e) {
+        const video = document.createElement('video');
+        video.src = e.target.result;
+        video.controls = true;
+        video.style.margin = '5px'; // Add spacing between videos
+        filePreview.appendChild(video);
+      };
+    }
+
+    fileReader.readAsDataURL(file);
+  }
+});
+
+// Handle cancel button click to delete file and hide the preview
+cancelPreviewBtn.addEventListener('click', function (event) {
+  event.stopPropagation(); // Prevent event from bubbling up
+  fileInput.value = ''; // Clear file input value
+  filePreview.innerHTML = '<span>No file selected yet...</span>'; // Reset preview content
+  cancelPreviewBtn.style.display = 'none'; // Hide close button
+});
+
+// Handle upload button click
+uploadBtn.addEventListener('click', function () {
+  // Show upload progress
+  uploadProgressContainer.style.display = 'block';
+
+  // Simulate upload progress
+  let progress = 0;
+  const progressInterval = setInterval(() => {
+    if (progress >= 100) {
+      clearInterval(progressInterval);
+      alert('Upload complete!');
+      progressBar.style.width = '0';
+      uploadProgressContainer.style.display = 'none';
+    } else {
+      progress += 10;
+      progressBar.style.width = progress + '%';
+    }
+  }, 300);
+
+  // Handle cancel upload button click
+  cancelUploadBtn.addEventListener('click', function () {
+    clearInterval(progressInterval);
+    progressBar.style.width = '0';
+    uploadProgressContainer.style.display = 'none';
+    alert('Upload canceled');
+  });
+});
+
+
+
+
+
+
+   
+
+
+
+
+</script>
+
+
+
+
+
+
+
+
+
+    <!----------------------------JAVASCRIPT--------------------------->
+
+
+    <script src="script.js"></script>
+
+    
+    <script src="app.js"></script>
+    
+</body>
+</html>
